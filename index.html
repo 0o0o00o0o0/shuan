@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <title>Document</title>
+  <link type="text/css" rel="styleSheet" href="./css/index.css" />
+  <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+</head>
+
+<body>
+  <div class="top_logo-box">
+    <img class="top_logo" src="./img/tl@2x.png" />
+  </div>
+
+  <div id="main">
+    <div class="main-body">
+      <img class="logo d-b" src="./img/logo.png" alt="" />
+      <div class="title">GTX.ZIP开放式体验</div>
+      <div class="date fs_87rem pc_cs">活动时间：2018.08.08 - 2018.10.30</div>
+      <button class="zip fs_1rem phone_cs">全球限量500个名额
+      </button>
+      <button class="zip fs_1rem pc_cs">解压缩客户端下载&emsp;&emsp;
+        <i class="iconfont">&#xe638;</i>
+      </button>
+      <div style="margin-top:1rem" class="date fs_87rem phone_cs">活动时间：2018.08.08 - 2018.10.30</div>
+      <div class="zip-detail pc_cs">下载客户端可了解更多产品详情，填写下列表单可体验压缩功能</div>
+      <input class="textinput w-100_ fs_1rem access_key_iD" style="margin-top:4.6875rem" type="text" name="" id="" placeholder="AccessKeyID"
+      />
+      <input class="textinput w-100_ fs_1rem secret_access_key" type="text" name="" id="" placeholder="AccessKeySecret" />
+      <select class="textinput w-100_ fs_1rem textselect"></select>
+      <input class="textinput w-100_ fs_1rem form_bucket" type="text" name="" id="" placeholder="源0SS文件路径" />
+      <input class="textinput w-100_ fs_1rem to_bucket" type="text" name="" id="" placeholder="目标0SS文件路径" />
+      <input class="textinput w-100_ fs_1rem telephone_number d-ib" type="text" style="width:70%" name="" id="" placeholder="手机号码验证"
+      />
+      <button class='sendcode w-100_ fs_1rem button fs_87rem f-r'>发送</button>
+      <input class="textinput w-100_ fs_1rem verification_code" type="text" name="" id="" placeholder="验证码" />
+      <button class=' start_ys textinput w-100_  button fs_1rem'>开始压缩</button>
+      <!-- <div class="br pc_cs">
+        <div class="message w-100_ fs_87rem">GTX-Zip采用先进的压缩算法对任意数据或目录进行高压缩率的快速打包，目前发布了两个版本。</div>
+        <div class="message w-100_ fs_87rem message-detail marginrem">1. 为企业用户定制的企业版（Enterprise版本）</div>
+        <div class="message w-100_ fs_87rem message-detail ">2. 为研究学习的非商业版（Github版，这里是链接）</div>
+        <div class="message w-100_ fs_87rem marginrem">这次活动提供的是企业版的压缩功能 </div>
+        <div class="message w-100_ fs_87rem message-detail marginrem">对于人类基因测序Fastq的数据，与行业默认标准gzip相比，企业版的压缩率是gzip的1/6，压缩速度更是提升了多个数量级，达到了恐怖的800MB/s (MD5校验），400MB/s (MD5校验+还原验证）。在这样的极高倍率压缩技术的支持下，使用百兆网络，就能达到之前千兆速度上传数据的效果，为基因测序领域在互联网云商的计算以及数据传输产品的广泛应用提供了最重要的基础，大大降低了测序成本，您在GTX-Zip上除了可以享受优质的压缩服务之外，包含在产品内的GTX-Trans工具通过传输算法优化还为您提供了高性能的跨区域满宽带传输能力。</div>
+      </div> -->
+      <div class="br ">
+        <div class="abstract">产品简介</div>
+        <div class="message w-100_ fs_87rem message-detail " style="margin-top:2rem">GTX.Zip是人和未来开发的针对测序数据的高效压缩、传输与分发系统。该系统采用高效“多流数据”存储结构，对包含任意基因测序数据的目录进行高压缩率的快速打包，形成单一文件，方便存储、传输和校验，并支持随机寻址。</div>
+        <div class="down-load">
+          GTX.zip解压工具下载：
+          <span id="url">https://github.com/Genetalks/gtz.git</span>
+        </div>
+        <div class="advantage w-100_">
+          <div class="abstract w-100_">四大核心优势</div>
+          <div class="abstract-div w-100_ fs_87rem">
+            <div class="abstract-title ">1、无损高压</div>
+            <img src="./img/zip.png" class="abstract-png d-b" alt="" />
+            <div class="abstract-detail">GTZ 单个压缩节点的压缩速度高达800MB/s，企业级压缩系统更支持大规模分布式压缩能力。</div>
+          </div>
+
+          <div class="abstract-div w-100_ fs_87rem">
+            <div class="abstract-title ">2、快速如飞</div>
+            <img src="./img/fast.png" class="abstract-png d-b" alt="" />
+            <div class="abstract-detail">GTZ 全球领先的基因数据无损压缩算法，能够将FASTQ文件压缩最低至原大小的2%。可以直接重压缩常见的fastq.gz 至原大小的1/3~1/6，为您立即节省高达 80%的云上存储以及数据分发费用。</div>
+          </div>
+
+          <div class="abstract-div w-100_ fs_87rem">
+            <div class="abstract-title ">3、无错无忧</div>
+            <img src="./img/safe.png" class="abstract-png d-b" alt="" />
+            <div class="abstract-detail">GTZ 企业版采用业内唯一的企业级数据正确性与安全策略。在压缩的过程中，并行地进行解压还原测试。只有确认解压还原测试后的数据与源数据完全一致，压缩数据才会落地。落地后的数据，采用分块md5校验，以确保能够校验数据完整性。</div>
+          </div>
+
+          <div class="abstract-div w-100_ fs_87rem">
+            <div class="abstract-title ">4、方案完备</div>
+            <img src="./img/full.png" class="abstract-png d-b" alt="" />
+            <div class="abstract-detail">GTZ 提供免费的 Linux 、Mac OSX以及Windows等全平台命令行解压工具，以及图形化解压工具。与此同时，提供Python、C/C++等第三方SDK接口，方便自动化数据内容读写处理。此外，人和未来为 GTZ
+              企业版 直供已经支持GTZ的 BCL2FASTQ、FASTP、BWA等原汁原味的常用计算软件版本，无需解压，直接计算，并且比原生应用性能更高。（具体请联系人和未来）</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="dimension_code w-100_">
+        <div class="dimension_title f-l">
+          本次开放式体验活动时间和官方公众号信息一致 详情请关注公众号信息
+        </div>
+        <img class="f-r d-b dimension_code_svg" src="./img/code.svg" />
+      </div>
+    </div>
+
+  </div>
+  <div class="foot w-100_">
+    <div class="foot_message fs_87rem">Copyright @ 2018 Genetalks All Rights Reserved.</div>
+    <div class="foot_message ">人和未来生物信息（北京）科技有限公司 版权所有</div>
+  </div>
+  <div class="shade">
+    <div class="shade-body">
+      <img class="shade-body-svg d-b" src="./img/success.svg" />
+      <div class="btnok">提交成功</div>
+      <div class="shade-count fs_1rem">您的压缩任务已经提交到云端服务器运行预计处理时间为
+        <span class='bluecolor'>1小时50分钟</span>，任务结束后会自动将压缩后的数据文件上传到您的目标路径里，同时会以短信的形式将结果发送到您的
+        <span class='bluecolor'>185***7429</span>的手机上，请注意查收信息。</div>
+      <div class="shade-message">处理时间：
+        <span class='bluecolor'>1小时50分钟</span>
+      </div>
+      <div class="shade-message">信息接收：
+        <span class='bluecolor'>186****7429</span>
+      </div>
+      <button class="finally button">我知道了</button>
+    </div>
+  </div>
+  <script src="./zepto.min.js"></script>
+  <script src="./json.js"></script>
+  <script src='./index.js'></script>
+</body>
+
+</html>
