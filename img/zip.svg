@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.825 25.887">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a1d637;
+      }
+
+      .cls-2, .cls-4, .cls-8 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #eaf4f6;
+      }
+
+      .cls-4 {
+        opacity: 0.61;
+      }
+
+      .cls-5 {
+        fill: #dcecf0;
+      }
+
+      .cls-6 {
+        fill: #3b95fe;
+      }
+
+      .cls-7 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="组_4159" data-name="组 4159" transform="translate(-49 -1618.139)">
+    <rect id="矩形_7792" data-name="矩形 7792" class="cls-1" width="15.082" height="6.753" transform="translate(49 1618.139)"/>
+    <g id="矩形_7793" data-name="矩形 7793" class="cls-2" transform="translate(66.743 1618.139)">
+      <rect class="cls-7" width="15.082" height="6.753"/>
+      <rect class="cls-8" x="1" y="1" width="13.082" height="4.753"/>
+    </g>
+    <rect id="矩形_7794" data-name="矩形 7794" class="cls-3" width="15.082" height="6.753" transform="translate(49 1627.706)"/>
+    <g id="矩形_7795" data-name="矩形 7795" class="cls-4" transform="translate(66.743 1627.706)">
+      <rect class="cls-7" width="15.082" height="6.753"/>
+      <rect class="cls-8" x="1" y="1" width="13.082" height="4.753"/>
+    </g>
+    <rect id="矩形_7796" data-name="矩形 7796" class="cls-5" width="15.082" height="6.753" transform="translate(49 1637.273)"/>
+    <rect id="矩形_7797" data-name="矩形 7797" class="cls-6" width="15.082" height="6.753" transform="translate(66.743 1637.273)"/>
+  </g>
+</svg>

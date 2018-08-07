@@ -8,6 +8,7 @@ Zepto (function ($) {
   var optionDom = '';
   //手机号正则
   var phoneReg = /(^1\d{10}$)/;
+  // 加载下拉数据
   for (var i = 0; i < json.length; i++) {
     optionDom +=
       '<option value ="' + json[i].value + '">' + json[i].name + '</option>';
@@ -24,12 +25,6 @@ Zepto (function ($) {
     window.open ('https://github.com/Genetalks/gtz.git');
   }
   $ ('#url').click (function () {
-    urlClicked ();
-  });
-  /**
-  *  点击解压客户端下载
-  */
-  $ ('.zip').click (function () {
     urlClicked ();
   });
   ////   电话号码发送按钮点击事件
@@ -51,15 +46,19 @@ Zepto (function ($) {
         }
       }, 1000);
       $.ajax ({
-        // 同步发送ajax 获取数据
+        // 异步发送ajax 获取数据
         type: 'GET',
         url: '/api/v1/sms/' + phone + '/code',
         success: function (data) {
-          console.log ('s-->');
-          console.log (data);
+          if (data.status === 200) {
+            console.log ('短信发送成功');
+          } else {
+            alert (data.message);
+          }
         },
-        error: function (xhr, type) {
-          alert ('Ajax error!');
+        error: function (e) {
+          console.log (e);
+          alert ('请求出错，请稍后再试');
         },
       });
     } else {
@@ -71,42 +70,66 @@ Zepto (function ($) {
    */
   $ ('.start_ys').click (function () {
     clearTimeout (timeout);
-
+    var phonenum = $ ('.telephone_number').val ();
     var postdata = {
       access_key_id: $ ('.access_key_iD').val (),
       secret_access_key: $ ('.secret_access_key').val (),
       endpoint: $ ('.textselect').val (),
       from_bucket: $ ('.form_bucket').val (),
       to_bucket: $ ('.to_bucket').val (),
-      telephone_number: $ ('.telephone_number').val (),
+      telephone_number: phonenum,
       verification_code: $ ('.verification_code').val (),
     };
-    console.log (postdata);
     if (!phoneReg.test ($.trim ($ ('.telephone_number').val ()))) {
       alert ('请输入正确的手机号码重试');
       return;
     }
     var timeout = setTimeout (() => {
+      //  避免重复提交
       if (!isposting) {
         isposting = true;
         $.ajax ({
-          // 同步发送ajax 获取数据
+          // 异步发送ajax 获取数据
           type: 'POST',
           url: baseUrl + '/api/v1.0/get_client_proxy',
           data: JSON.stringify (postdata),
           contentType: 'application/json',
           success: function (data) {
-            console.log ('s-->'); // 数据成功处理
-            console.log (data);
+            data = JSON.parse (data);
+            // 数据成功处理
+            if (data.code === 0) {
+              $ ('.bluephone').html (
+                phonenum.substring (0, 3) + '****' + phonenum.substring (7, 11)
+              );
+              $ ('.shade').css ('display', 'block');
+            } else {
+              alert (data.info);
+            }
+            isposting = false;
           },
           error: function (e) {
-            console.log ('Ajax error!');
             console.log (e);
+            alert ('请求出错，请稍后再试');
+            isposting = false;
           },
         });
       } else {
         alert ('数据提交中，请稍后再试');
       }
     }, 500);
+  });
+  /**
+ *  遮罩层消失
+ */
+  $ ('.finally').click (function () {
+    $ ('.shade').css ('display', 'none');
+    // 清空输入框数据
+    $ ('.access_key_iD').val ('');
+    $ ('.secret_access_key').val ('');
+    $ ('.textselect').val (json[0].value);
+    $ ('.form_bucket').val ('');
+    $ ('.to_bucket').val ('');
+    $ ('.telephone_number').val ('');
+    $ ('.verification_code').val ('');
   });
 });

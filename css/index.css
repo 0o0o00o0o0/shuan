@@ -55,41 +55,26 @@ html {
   }
 }
 
-@media screen and (max-width:490px) {
-  .phone_cs {
-    display: block;
-  }
-  .pc_cs {
-    display: none
-  }
-}
-
 @media screen and (min-width:491px) {
   html, body {
     font-size: 1rem;
   }
-  .phone_cs {
-    display: none;
-  }
-  .pc_cs {
-    display: block
-  }
 }
 
 input::-webkit-input-placeholder {
-  margin-left: 1rem
+  padding-left: 1rem
 }
 
 input::-moz-placeholder {
-  margin-left: 1rem
+  padding-left: 1rem
 }
 
 input:-moz-placeholder {
-  margin-left: 1rem
+  padding-left: 1rem
 }
 
 input:-ms-input-placeholder {
-  margin-left: 1rem
+  padding-left: 1rem
 }
 
 .main-body {
@@ -108,7 +93,6 @@ input:-ms-input-placeholder {
 
 .top_logo {
   position: absolute;
- 
   width: 1233px;
   top: calc(-650px - 4rem);
   left: calc( (100vw - 1233px)/2);
@@ -149,29 +133,30 @@ input:-ms-input-placeholder {
 }
 
 .title {
-  margin-top: 2.8rem;
+  margin-top: 4.8rem;
   font-size: 2.5rem;
-  font-weight: bold;
   color: white;
 }
 
 .date {
+  margin: 1rem;
   color: white;
 }
 
 .zip {
   width: 13.3rem;
-  height: 3.125rem;
-  margin-top: 3.5625rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  text-align: center;
+  margin-top: 2.5625rem;
   background: #48CB12;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
   border: 0;
   color: white;
 }
 
 .zip-detail {
-  font-size: 0.27rem;
-  color: white;
+  color: #AFAFAF;
   margin-top: 1.3125rem
 }
 
@@ -183,10 +168,18 @@ input:-ms-input-placeholder {
   border: 0
 }
 
+.textselect {
+  padding-left: 1rem
+}
+
+.telephone_number {
+  margin-top: 4.56rem;
+}
+
 .sendcode {
   width: 25%;
   height: 3.125rem;
-  margin-top: 1.1875rem;
+  margin-top: 4.56rem;
 }
 
 .button {
@@ -196,11 +189,16 @@ input:-ms-input-placeholder {
   color: white
 }
 
+.start_ys {
+  height: 3.75rem;
+  margin-top: 3.75rem;
+}
+
 .br {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  margin-top: 5.4375rem;
-  padding: 3rem 0
+  margin-top: 4.656rem;
+  padding: 5rem 0
 }
 
 .message {
@@ -221,14 +219,13 @@ input:-ms-input-placeholder {
 }
 
 .dimension_title {
-  color: #296AEB;
-  color: 0.875rem;
+  color: #79A6FF;
   width: 60%
 }
 
 .dimension_code_svg {
-  width: 5.1875rem;
-  height: 5.1875rem;
+  width: 6.1875rem;
+  height: 6.1875rem;
 }
 
 .foot {
@@ -246,10 +243,11 @@ input:-ms-input-placeholder {
 .shade {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 99;
-  background: rgba(0, 0, 0, 0.8)
+  background: rgba(0, 0, 0, 0.8);
+  display: none
 }
 
 .shade-body {
@@ -307,10 +305,10 @@ input:-ms-input-placeholder {
 .down-load {
   height: 3.125rem;
   line-height: 3.125rem;
-  background: black;
+  background: #171E2D;
   color: #5D7FC2;
   padding-left: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .down-load span {
@@ -321,10 +319,14 @@ input:-ms-input-placeholder {
 .advantage {
   margin-top: 4.21rem;
   border-top: 1px solid black;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .abstract-div {
+  margin-top: 4rem
+}
+
+.margin3rem {
   margin-top: 3rem
 }
 
